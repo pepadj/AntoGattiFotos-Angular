@@ -1,0 +1,51 @@
+<div id="contact" class="spacer">
+
+    <!--Contact Starts-->
+    <div class="container contactform center">
+        <div class="row wowload fadeInLeftBig">
+            <div class="col-md-1">
+                <!-- Gap between columns -->
+            </div>
+            <div class="text-center col-md-5 col-sm-6">
+                <p aria-hidden="true" style="text-align: center;">
+                    <font style="font-family: 'Crete Round', serif; font-size:300%; font-weight:bold; line-height: 40pt;">
+                        ¡Dejame tu Consulta!
+                    </font>
+                </p>
+                <p>
+                    <font> ¡Hola! ¿Te gustaron mis fotos?</font>
+                </p>
+                <p>
+                    <font>¿Querés averiguar disponibilidad y características del servicio? ¿Necesitas una propuesta creativa y con diseño?</font>
+                </p>
+                <p>
+                    <font>Por favor escribeme mediante este pequeño formulario. Podes contarme acerca de tu fiesta y planes. Las críticas y sugerencias son bienvenidas, me gustaría saber tu opinión.</font>
+                </p>
+                <p>
+                    <font>¡Gracias por tomarte el tiempo para ver mi página!</font>
+                </p>
+            </div>
+            <div class="col-md-1">
+                <!-- Gap between columns -->
+            </div>
+
+            <div class="text-center col-md-5 col-sm-6  divEnviarMail">
+                <p aria-hidden="true" style="text-align: center;"></p>
+
+                <input placeholder="Nombre" name="Nombre" asp-for="@Model.Nombre" />
+                <span asp-validation-for="@Model.Nombre" class="text-danger"></span>
+
+                <input placeholder="Compañía" name="Compania" asp-for="@Model.Compania" />
+                <span asp-validation-for="@Model.Compania" class="text-danger"></span>
+
+                <textarea rows="5" placeholder="Mensaje" name="Message" asp-for="@Model.Message"></textarea>
+                <span asp-validation-for="@Model.Message" class="text-danger"></span>
+
+                <button id="btnEnviarEmail" class="btn btn-primary">
+                        <i class="fa fa-paper-plane"></i> Enviar
+                    </button>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<body class="is-loading-0 is-loading-1 is-loading-2" id="idBodyGallery">
+    <!-- Main -->
+    <div id="mainGallery">
+        <!-- Header -->
+        <section style="text-align:center; background:#1b1c1f;">
+            <a class="navbar-brand" routerLink="">
+                <img src="assets/images/CierreAlbum.png" alt="logo" align="right">
+            </a>
+        </section>
+        <div id="header">
+            <div>
+                <a class="navbar-brand" routerLink="">
+                    <img src="assets/images/LogoAlbum.png" alt="logo" align="middle" style="text-decoration:none;float: none;">
+                </a>
+            </div>
+        </div>
+        <section style="background:#1b1c1f;">
+            <ul class="icons text-success" style="background:#1b1c1f;">
+                <li>
+                    <a class="fa fa-facebook fa-lg" href="https://www.facebook.com/mantonellagatti/?pnref=lhc"></a>
+                </li>
+                <li>
+                    <a class="fa fa-instagram fa-lg" href="https://www.instagram.com/antogatti.fotos/"></a>
+                </li>
+                <li>
+                    <a class="fa fa-youtube fa-lg" href="https://www.instagram.com/antogatti.fotos/"></a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Thumbnail -->
+        <section id="thumbnails">
+            <article *ngFor="let item of CollectionsImages; let ultimo= last;" appCallBack [CallBack]="InicarJavaScript" callback-condition="{{ ultimo }}">
+                <a class=" thumbnail " href="{{ item.Path }} " data-position="center ">
+                    <img src="{{ item.Path }} " alt=" " />
+                </a>
+            </article>
+
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer ">
+            <ul class="copyright text-center ">
+                <li>Diseño: <a routerLink="/#works ">Anto Gatti - Fotos</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+
