@@ -26,8 +26,8 @@ export class CallBackDirective implements OnDestroy,AfterViewInit {
     if (value == "false") return;       
 
     if (this.callback) {
-      console.log("Value",value);
-      console.log(this.callback);
+      //console.log("Value",value);
+      //console.log(this.callback);
 
       this.callback(true);
       //this.called = true;

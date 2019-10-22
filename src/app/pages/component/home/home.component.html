@@ -3,11 +3,8 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-
-            <!-- {{ this.ProcessDirectorySlider()}} -->
-            <!-- @foreach (string item in Model.SliderCollectionsImages) {
-            } -->
-            <div class="swiper-slide" *ngFor="let item of SliderCollectionsImages">
+            
+            <div class="swiper-slide" *ngFor="let item of SliderCollectionsImages let ultimo= last;" appCallBack [CallBack]="InicarJavaScript" callback-condition="{{ ultimo }}">
                 <img style="width: 100%;height:80%;" src={{item.Path}} alt="banner">
             </div>
 
@@ -19,3 +16,4 @@
         <div class="swiper-button-prev carousel-control glyphicon glyphicon-chevron-left" style="font-size: 35px;"></div>
     </div>
 </div>
+

@@ -1,29 +1,30 @@
-import { Component, OnInit, ViewEncapsulation, Input, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, AfterViewChecked, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { ImagenesService, Imagenes } from 'src/app/services/Imagenes.service';
 
 declare function Init();
 
+
 @Component({
   selector: 'app-pages-album',
   templateUrl: './pages-album.component.html',
-  styleUrls: ['../../../../assets/css/PopupGallery/css/main.css']
-    ,encapsulation: ViewEncapsulation.Emulated
-    
+  styleUrls: []
+  , encapsulation: ViewEncapsulation.None
+
 })
 
-export class PagesAlbumComponent implements OnInit {
+export class PagesAlbumComponent implements OnInit, OnDestroy {
 
   id: string;
   CollectionsImages: Imagenes;
 
-  @Input() set ready(isReady: boolean) { 
+  // @Input() set ready(isReady: boolean) {
 
-    console.log(isReady);
-    if (isReady) 
-    Init(); 
-  } 
+  //   console.log(isReady);
+  //   if (isReady)
+  //     Init();
+  // }
 
   constructor(private router: Router,
     private route: ActivatedRoute, private _imgService: ImagenesService) {
@@ -35,18 +36,21 @@ export class PagesAlbumComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  ngOnInit() {    
 
-    console.log(this.id);
+    var nameFolder:string = this.GetNameFolderForId();
 
-    if (this.id === "1") {
+    this.GetImageForFolder("fulls", nameFolder, "jpg").subscribe(data => {
+      this.CollectionsImages = data
 
-      this.GetImageForFolder("fulls", "BebesYNiños", "jpg").subscribe(data => {
-        this.CollectionsImages = data
+      console.log(this.CollectionsImages);
+    });
 
-        console.log(this.CollectionsImages);
-      });
-    }
+    document.body.classList.add('bodyTrabajos');
+  }
+
+  ngOnDestroy() {
+    document.body.classList.remove('bodyTrabajos');
   }
 
   ngAfterViewChecked() {
@@ -57,13 +61,19 @@ export class PagesAlbumComponent implements OnInit {
     return this._imgService.getImagenesForSubFolder({ folder$: folder, subfolder$: subFolder, ext$: ext })
   }
 
-  InicarJavaScript(value) {
-    if(value==true){
-      Init();
+  GetNameFolderForId(): string {
 
-      //console.log("InicarJavaScript",value);
-    }
+    if (this.id === "1") { return "Fiestas"; }
+    if (this.id === "2") { return "BebesYNiños"; }
+    if (this.id === "3") { return "Instituciones"; }
+    if (this.id === "4") { return "Books"; }
+    if (this.id === "5") { return "Familias"; }
+    if (this.id === "6") { return "Personales"; }    
   }
 
-  
+  InicarJavaScript(value) {
+    if (value == true) {
+      Init();      
+    }
+  }
 }

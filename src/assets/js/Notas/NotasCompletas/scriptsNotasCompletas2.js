@@ -27,7 +27,7 @@ $(document).ready(function() {
     /*-----------------------------------------------------------------------------------*/
     /*	HAMBURGER MENU ICON
     /*-----------------------------------------------------------------------------------*/
-    $(".nav-bars").on( "click", function() {
+    $(".nav-bars").on("click", function() {
         $(".nav-bars").toggleClass("is-active");
     });
     /*-----------------------------------------------------------------------------------*/
@@ -53,6 +53,7 @@ $(document).ready(function() {
         caption: '',
         displayType: 'default',
     });
+
     $('#clients').cubeportfolio({
         layoutMode: 'slider',
         drag: true,
@@ -125,7 +126,7 @@ $(document).ready(function() {
         download: false,
         autoplayControls: false,
         zoom: false,
-	    fullScreen: false,
+        fullScreen: false,
         thumbWidth: 100,
         thumbContHeight: 80,
         videoMaxWidth: '1000px'
@@ -133,33 +134,33 @@ $(document).ready(function() {
     /*-----------------------------------------------------------------------------------*/
     /*	GO TO TOP
     /*-----------------------------------------------------------------------------------*/
-    $.scrollUp({
-        scrollName: 'scrollUp',
-        // Element ID
-        scrollDistance: 300,
-        // Distance from top/bottom before showing element (px)
-        scrollFrom: 'top',
-        // 'top' or 'bottom'
-        scrollSpeed: 300,
-        // Speed back to top (ms)
-        easingType: 'linear',
-        // Scroll to top easing (see http://easings.net/)
-        animation: 'fade',
-        // Fade, slide, none
-        animationInSpeed: 200,
-        // Animation in speed (ms)
-        animationOutSpeed: 200,
-        // Animation out speed (ms)
-        scrollText: '<span class="btn btn-square"><i class="ion-android-arrow-up"></i></span>',
-        // Text for element, can contain HTML
-        scrollTitle: false,
-        // Set a custom <a> title if required. Defaults to scrollText
-        scrollImg: false,
-        // Set true to use image
-        activeOverlay: false,
-        // Set CSS color to display scrollUp active point, e.g '#00FFFF'
-        zIndex: 1001 // Z-Index for the overlay
-    });
+    // $.scrollUp({
+    //     scrollName: 'scrollUp',
+    //     // Element ID
+    //     scrollDistance: 300,
+    //     // Distance from top/bottom before showing element (px)
+    //     scrollFrom: 'top',
+    //     // 'top' or 'bottom'
+    //     scrollSpeed: 300,
+    //     // Speed back to top (ms)
+    //     easingType: 'linear',
+    //     // Scroll to top easing (see http://easings.net/)
+    //     animation: 'fade',
+    //     // Fade, slide, none
+    //     animationInSpeed: 200,
+    //     // Animation in speed (ms)
+    //     animationOutSpeed: 200,
+    //     // Animation out speed (ms)
+    //     scrollText: '<span class="btn btn-square"><i class="ion-android-arrow-up"></i></span>',
+    //     // Text for element, can contain HTML
+    //     scrollTitle: false,
+    //     // Set a custom <a> title if required. Defaults to scrollText
+    //     scrollImg: false,
+    //     // Set true to use image
+    //     activeOverlay: false,
+    //     // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+    //     zIndex: 1001 // Z-Index for the overlay
+    // });
     /*-----------------------------------------------------------------------------------*/
     /*	IMAGE ICON HOVER
     /*-----------------------------------------------------------------------------------*/
@@ -328,9 +329,9 @@ $(document).ready(function() {
             'allowPartialLastRow': true
         });
     };
-    
-    
-    
+
+
+
     // This is just for the case that the browser window is resized
     var resizeTimer = null;
     $(window).on('resize', function() {

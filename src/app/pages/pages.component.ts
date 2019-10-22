@@ -3,13 +3,14 @@ import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/co
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
-  styleUrls: ['./pages.component.css'] 
-              ,encapsulation: ViewEncapsulation.None
+  styleUrls: [] 
+  ,  encapsulation: ViewEncapsulation.None
 })
 export class PagesComponent implements OnInit{
 
   constructor() { }
 
   ngOnInit() {
+    
   } 
 }

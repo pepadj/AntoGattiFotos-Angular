@@ -24,10 +24,30 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.css"                                                    
+                            "src/styles.css",
+                            "src/assets/lib/bootstrap/dist/css/bootstrap.css",
+                            "src/assets/css/animate/set.css",
+                            "src/assets/css/animate/animate.css",
+                            "src/assets/css/style.css",
+                            "src/assets/css/swiper.css",
+                            "src/assets/css/PopupGallery/css/main.css",
+                            "src/assets/css/Notas/mainNotas.css",
+                            "src/assets/css/Notas/NotasCompletas/blue.css",
+                            "src/assets/css/Notas/NotasCompletas/plugins.css",
+                            "src/assets/css/Notas/NotasCompletas/css/NotaCompleta.css"
                         ],
                         "scripts": [
-
+                            "src/assets/lib/jquery/dist/jquery.min.js",
+                            "src/assets/lib/bootstrap/dist/js/bootstrap.min.js",
+                            "src/assets/js/wow.min.js",
+                            "src/assets/js/mobile/touchSwipe.min.js",
+                            "src/assets/js/swiper.js",
+                            "src/assets/js/skel.min.js",
+                            "src/assets/js/mainGallery.js",
+                            "src/assets/js/site.js",
+                            "src/assets/js/Notas/mainNotas.js",
+                            "src/assets/js/Notas/NotasCompletas/pluginsNotasCompletas2.js",
+                            "src/assets/js/script.js"
                         ]
                     },
                     "configurations": {

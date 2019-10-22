@@ -302,7 +302,7 @@ p {
 
 /*contact*/
 
-.footer {
+#footerIndex .footer {
     background-color: #111;
     color: #fff;
     font-size: 1em;
@@ -310,7 +310,11 @@ p {
     display: grid;
 }
 
-.footer a {
+div.fb-like {
+    padding-bottom: 10px;
+}
+
+#footerIndex .footer a {
     color: #aaa;
     margin: 0 1em;
 }
@@ -481,7 +485,7 @@ p {
     figure.effect-chico figcaption {
         padding: 1.5em;
     }
-    .footer {
+    #idBodyIndex .footer {
         margin-top: 2em;
         padding-bottom: 2em;
     }

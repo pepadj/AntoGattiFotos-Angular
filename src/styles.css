@@ -2,3 +2,29 @@
 
 
 /* @import "~font-awesome/css/font-awesome.css; */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#scrollUp1 {
+    background-image: url("assets/images/top.png");
+    bottom: 20px;
+    right: 20px;
+    width: 38px;
+    /* Width of image */
+    height: 38px;
+    /* Height of image */
+}
+
+#scrollUp1-active {
+    border-top: 0px dotted rgb(0, 255, 255) !important;
+}

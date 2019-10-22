@@ -16,10 +16,13 @@ import { FooterComponent } from './component/footer/footer.component';
 
 import { PagesAlbumComponent } from './component/pages-album/pages-album.component';
 
+import { NotasComponent } from './component/notas/notas.component';
+import { NotasCompleta1Component } from './component/notas-completa1/notas-completa1.component';
+import { NotasCompleta2Component } from './component/notas-completa2/notas-completa2.component';
+
 //Service
 import { ImagenesService } from '../services/Imagenes.service';
 import { CallBackDirective } from '../Directives/call-back.directive';
-import { InicioComponent } from './component/inicio/inicio.component';
 
 @NgModule({
     declarations: [
@@ -34,15 +37,19 @@ import { InicioComponent } from './component/inicio/inicio.component';
         FooterComponent,
         PagesAlbumComponent,
         CallBackDirective,
-        InicioComponent
+        NotasComponent,
+        NotasCompleta1Component,
+        NotasCompleta2Component        
     ],
-    providers: [ImagenesService],
+    providers: [
+        ImagenesService
+    ],
     exports: [                               
     ],
     imports: [        
         PAGES_ROUTES,
         HttpClientModule,
-        CommonModule
+        CommonModule        
     ]
 })
 export class PagesModule { }
