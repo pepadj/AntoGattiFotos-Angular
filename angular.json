@@ -28,13 +28,13 @@
                             "src/assets/lib/bootstrap/dist/css/bootstrap.css",
                             "src/assets/css/animate/set.css",
                             "src/assets/css/animate/animate.css",
-                            "src/assets/css/style.css",
+                            "src/assets/css/styleBase.css",
                             "src/assets/css/swiper.css",
                             "src/assets/css/PopupGallery/css/main.css",
+                            "src/assets/css/PopupGallery/css/lightgallery.css",
                             "src/assets/css/Notas/mainNotas.css",
-                            "src/assets/css/Notas/NotasCompletas/blue.css",
                             "src/assets/css/Notas/NotasCompletas/plugins.css",
-                            "src/assets/css/Notas/NotasCompletas/css/NotaCompleta.css"
+                            "src/assets/css/Notas/NotasCompletas/NotaCompleta.css"
                         ],
                         "scripts": [
                             "src/assets/lib/jquery/dist/jquery.min.js",

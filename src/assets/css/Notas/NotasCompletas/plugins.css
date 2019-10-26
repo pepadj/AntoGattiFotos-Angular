@@ -4996,7 +4996,8 @@
 
 /*-----------------------------------------------------------------------------------*/
 
-.lg-actions .lg-next,
+
+/* .lg-actions .lg-next,
 .lg-actions .lg-prev,
 .lg-sub-html,
 .lg-toolbar {
@@ -5251,9 +5252,10 @@
     opacity: 0;
     -webkit-transform: translate3d(0, -10px, 0);
     transform: translate3d(0, -10px, 0)
-}
+} */
 
-body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-object {
+
+/* body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-object {
     -webkit-transform: scale3d(.5, .5, .5);
     transform: scale3d(.5, .5, .5);
     opacity: 0;
@@ -5428,15 +5430,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-has-vimeo .lg-video-play {
-    /* background: url(../img/vimeo-play.png) no-repeat */
+ 
 }
 
 .lg-outer .lg-has-vimeo:hover .lg-video-play {
-    /* background: url(../img/vimeo-play.png) 0 -58px no-repeat */
+   
 }
 
 .lg-outer .lg-has-html5 .lg-video-play {
-    /* background: url(../img/video-play.png) no-repeat; */
+    
     height: 64px;
     margin-left: -32px;
     margin-top: -32px;
@@ -5449,11 +5451,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-has-youtube .lg-video-play {
-    /* background: url(../img/youtube-play.png) no-repeat */
+   
 }
 
 .lg-outer .lg-has-youtube:hover .lg-video-play {
-    /* background: url(../img/youtube-play.png) 0 -60px no-repeat */
+    
 }
 
 .lg-outer .lg-video-object {
@@ -5754,7 +5756,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-item {
-    /* background: url(../img/loading.gif) center center no-repeat; */
+   
     display: none!important
 }
 
@@ -5929,7 +5931,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     -moz-transition: left 1s cubic-bezier(0, 0, .25, 1) 0s, opacity .1s ease 0s;
     -o-transition: left 1s cubic-bezier(0, 0, .25, 1) 0s, opacity .1s ease 0s;
     transition: left 1s cubic-bezier(0, 0, .25, 1) 0s, opacity .1s ease 0s
-}
+} */
 
 
 /*-----------------------------------------------------------------------------------*/

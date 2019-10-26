@@ -144,25 +144,28 @@ var main = (function($) {
             _.$viewer = $(
                 '<div id="viewer">' +
                 '<div class="inner">' +
-                '<div class="nav-next"></div>' +
-                '<div class="nav-previous"></div>' +
-                '<div class="toggle"></div>' +
+                '<div class="lg-actions">' +
+                '<div class="lg-prev lg-icon"></div>' +
+                '<div class="lg-next lg-icon"></div> </div>' +
+                '<div class="lg-toolbar lg-group" style="">' +
+                '<span class="lg-fullscreen lg-icon" style="font-size: 45px;"></span></div>' +
+                // '<div class="toggle"></div>' +
                 '</div>' +
                 '</div>'
             ).appendTo(_.$body);
 
             // Nav.
-            _.$navNext = _.$viewer.find('.nav-next');
-            _.$navPrevious = _.$viewer.find('.nav-previous');
+            _.$navNext = _.$viewer.find('.lg-next');
+            _.$navPrevious = _.$viewer.find('.lg-prev');
 
             // Main wrapper.
             _.$main = $('#mainGallery');
 
             // Toggle.
-            $('<div class="toggle"></div>')
-                .appendTo(_.$main);
+            // $('<div class="lg-fullscreen"></div>')
+            //     .appendTo(_.$main);
 
-            _.$toggle = $('.toggle');
+            _.$toggle = $('.lg-fullscreen');
 
             // IE<9: Fix viewer width (no calc support).
             if (skel.vars.IEVersion < 9)
@@ -675,7 +678,7 @@ var main = (function($) {
         up: function() {
 
             // Fullscreen? Bail.
-            if (_.$body.hasClass('fullscreen'))
+            if (_.$body.hasClass('fullscreen lg-fullscreen-on'))
                 return;
 
             // Calculate new index.
@@ -699,7 +702,7 @@ var main = (function($) {
         down: function() {
 
             // Fullscreen? Bail.
-            if (_.$body.hasClass('fullscreen'))
+            if (_.$body.hasClass('fullscreen lg-fullscreen-on'))
                 return;
 
             // Calculate new index.
@@ -723,11 +726,11 @@ var main = (function($) {
         show: function() {
 
             // Already visible? Bail.
-            if (!_.$body.hasClass('fullscreen'))
+            if (!_.$body.hasClass('fullscreen lg-fullscreen-on'))
                 return;
 
             // Show main wrapper.
-            _.$body.removeClass('fullscreen');
+            _.$body.removeClass('fullscreen lg-fullscreen-on');
 
             // Focus.
             _.$main.focus();
@@ -740,11 +743,11 @@ var main = (function($) {
         hide: function() {
 
             // Already hidden? Bail.
-            if (_.$body.hasClass('fullscreen'))
+            if (_.$body.hasClass('fullscreen lg-fullscreen-on'))
                 return;
 
             // Hide main wrapper.
-            _.$body.addClass('fullscreen');
+            _.$body.addClass('fullscreen lg-fullscreen-on');
 
             // Blur.
             _.$main.blur();
@@ -756,7 +759,7 @@ var main = (function($) {
          */
         toggle: function() {
 
-            if (_.$body.hasClass('fullscreen'))
+            if (_.$body.hasClass('fullscreen lg-fullscreen-on'))
                 _.show();
             else
                 _.hide();
