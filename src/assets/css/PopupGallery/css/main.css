@@ -134,10 +134,9 @@ q:after {
         background-color: #101010;
         overflow: hidden;
     }
-    
-    .text-center {
+    /* .text-center {
         text-align: center;
-    }
+    } */
     
     @media screen and (max-width: 1680px) {
         html.body.bodyTrabajos {

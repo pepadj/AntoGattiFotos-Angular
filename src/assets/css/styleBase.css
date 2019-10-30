@@ -76,7 +76,7 @@ p {
 .divEnviarMail {
     color: #ff6666;
     margin-top: 68px;
-    text-align: left;
+    text-align: left !important;
 }
 
 .btn {

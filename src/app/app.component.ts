@@ -24,13 +24,10 @@ export class AppComponent implements OnInit ,OnDestroy{
 
   ngOnInit() { 
 
-    this.routerSubscription = this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(event => {
-
-        //InitSwiperAndFacebook();
-        //$.getScript('//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9');
-      });  
+    // this.routerSubscription = this.router.events
+    //   .pipe(filter(event => event instanceof NavigationEnd))
+    //   .subscribe(event => {      
+    //   });  
 }
 
   ngOnDestroy() {

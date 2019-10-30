@@ -59,9 +59,10 @@
     padding: 0px 0 !important;
 }
 
-.text-center {
+
+/* .text-center {
     text-align: center !important;
-}
+} */
 
 body.bodyNotasCompleta1 #footerNotasComletas1 .footer {
     background-color: #111;

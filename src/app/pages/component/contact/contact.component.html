@@ -29,23 +29,35 @@
                 <!-- Gap between columns -->
             </div>
 
-            <div class="text-center col-md-5 col-sm-6  divEnviarMail">
+            <form class="text-center col-md-5 col-sm-6  divEnviarMail" [formGroup]='forma' (ngSubmit)="SubmitContactForm()">
                 <p aria-hidden="true" style="text-align: center;"></p>
 
-                <input placeholder="Nombre" name="Nombre" asp-for="@Model.Nombre" />
-                <span asp-validation-for="@Model.Nombre" class="text-danger"></span>
+                <div class="form-group" [ngClass]="{ 'has-error': submitted && f.nombre.errors }">
+                    <input type="text" placeholder="Nombre" formControlName="nombre" class="form-control">
+                    <div *ngIf="submitted && f.nombre.errors" class="has-error">
+                        <div *ngIf="f.nombre.errors.required">Este campo es requerido</div>
+                    </div>
+                </div>
 
-                <input placeholder="Compañía" name="Compania" asp-for="@Model.Compania" />
-                <span asp-validation-for="@Model.Compania" class="text-danger"></span>
+                <div class="form-group" [ngClass]="{ 'has-error': submitted && f.compania.errors }">
+                    <input type="text" placeholder="Compañía" formControlName="compania" class="form-control">
+                    <div *ngIf="submitted && f.compania.errors" class="has-error">
+                        <div *ngIf="f.compania.errors.required">Este campo es requerido</div>
+                    </div>
+                </div>
 
-                <textarea rows="5" placeholder="Mensaje" name="Message" asp-for="@Model.Message"></textarea>
-                <span asp-validation-for="@Model.Message" class="text-danger"></span>
+                <div class="form-group" [ngClass]="{ 'has-error': submitted && f.message.errors }">
+                    <textarea placeholder="Mensaje" formControlName="message" class="form-control"> </textarea>
+                    <div *ngIf="submitted && f.message.errors" class="has-error">
+                        <div *ngIf="f.message.errors.required">Este campo es requerido</div>
+                    </div>
+                </div>
 
-                <button id="btnEnviarEmail" class="btn btn-primary">
+                <button class="btn btn-primary">
                         <i class="fa fa-paper-plane"></i> Enviar
-                    </button>
+            </button>
 
-            </div>
+            </form>
         </div>
     </div>
 </div>

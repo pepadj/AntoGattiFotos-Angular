@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PAGES_ROUTES } from './pages.routes';
 
@@ -22,34 +23,40 @@ import { NotasCompleta2Component } from './component/notas-completa2/notas-compl
 
 //Service
 import { ImagenesService } from '../services/Imagenes.service';
+import { EmailService } from '../services/email.service';
+
+//Directivas
 import { CallBackDirective } from '../Directives/call-back.directive';
 
 @NgModule({
     declarations: [
-        PagesComponent,        
+        PagesComponent,
         AboutComponent,
         NavbarComponent,
         HomeComponent,
         AboutComponent,
         ServicesComponent,
         WorksComponent,
-        ContactComponent,
         FooterComponent,
         PagesAlbumComponent,
         CallBackDirective,
         NotasComponent,
         NotasCompleta1Component,
-        NotasCompleta2Component        
+        NotasCompleta2Component,
+        ContactComponent
     ],
     providers: [
-        ImagenesService
+        ImagenesService,
+        EmailService
     ],
-    exports: [                               
+    exports: [        
     ],
-    imports: [        
+    imports: [
         PAGES_ROUTES,
         HttpClientModule,
-        CommonModule        
+        FormsModule,
+        ReactiveFormsModule,
+        CommonModule
     ]
 })
 export class PagesModule { }
